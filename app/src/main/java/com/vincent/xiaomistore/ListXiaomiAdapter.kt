@@ -30,6 +30,7 @@ class ListXiaomiAdapter(private val listXiaomi: ArrayList<Xiaomi>) : RecyclerVie
             .into(holder.imgGambarProduk)
         holder.tvNama.text = hpXiaomi.name
         holder.tvSpesifikasi.text = hpXiaomi.specification
+        holder.tvHarga.text = hpXiaomi.price
     }
 
     override fun getItemCount(): Int {

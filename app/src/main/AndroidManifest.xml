@@ -9,7 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.XiaomiStore">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MoveToProfile"
+            android:parentActivityName=".MainActivity"
+            android:label="Profile"
+            >
+
+
+        </activity>
+
+        <activity android:name=".MainActivity"
+            android:label="Xiaomi"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
