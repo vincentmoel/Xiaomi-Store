@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <ImageView
+        android:contentDescription="@string/gambar_produk"
+        android:id="@+id/img_gambar_produk"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginEnd="20dp"
+        tools:src="@drawable/mi_10t_pro"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_nama_produk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nama_produk"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_spesifikasi_produk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/spesifikasi_produk"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="33dp">
+
+            <TextView
+                android:id="@+id/tv_harga_produk"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="@string/harga_produk"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:id="@+id/btn_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="@string/detail"
+                android:textSize="10sp" />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>
