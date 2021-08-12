@@ -11,6 +11,11 @@ import com.bumptech.glide.request.RequestOptions
 
 class ListXiaomiAdapter(private val listXiaomi: ArrayList<Xiaomi>) : RecyclerView.Adapter<ListXiaomiAdapter.ListViewHolder>() {
 
+    private lateinit var onItemClickCallback: OnItemClickCallback
+
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback
+    }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ListViewHolder {
         val view: View = LayoutInflater.from(viewGroup.context).inflate(
@@ -31,6 +36,9 @@ class ListXiaomiAdapter(private val listXiaomi: ArrayList<Xiaomi>) : RecyclerVie
         holder.tvNama.text = hpXiaomi.name
         holder.tvSpesifikasi.text = hpXiaomi.specification
         holder.tvHarga.text = hpXiaomi.price
+
+
+        holder.itemView.setOnClickListener { onItemClickCallback.onItemClicked(listXiaomi[holder.adapterPosition]) }
     }
 
     override fun getItemCount(): Int {
@@ -43,6 +51,11 @@ class ListXiaomiAdapter(private val listXiaomi: ArrayList<Xiaomi>) : RecyclerVie
         var tvNama : TextView = itemView.findViewById(R.id.tv_nama_produk)
         var tvSpesifikasi : TextView = itemView.findViewById(R.id.tv_spesifikasi_produk)
         var tvHarga : TextView = itemView.findViewById(R.id.tv_harga_produk)
+    }
+
+
+    interface OnItemClickCallback {
+        fun onItemClicked(data: Xiaomi)
     }
 
 }

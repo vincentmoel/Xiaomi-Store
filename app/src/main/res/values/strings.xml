@@ -16,4 +16,8 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="detail_spek">RAM : 8GB\nStorage Internal : 128GB\nProsesor : Qualcomm Snapdragon 732G\nLayar : DotDisplay Amoled FHD+ 6,55inch\nDimensi : 160,53mm x 75,73mm x 6,61mm\nBaterai : 4250mAh</string>
+    <string name="txt_detail_produk">Detail Produk :</string>
+    <string name="spek_singkat">6/128GB Snapdragon 870\nWarna : Arctic White</string>
+    <string name="nama_hp">Xiaomi POCO F3 5G</string>
 </resources>

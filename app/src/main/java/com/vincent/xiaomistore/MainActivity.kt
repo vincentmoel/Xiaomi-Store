@@ -8,6 +8,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -35,6 +36,12 @@ class MainActivity : AppCompatActivity() {
         val listXiaomiAdapter = ListXiaomiAdapter(list)
         rvHpXiaomi.adapter = listXiaomiAdapter
 
+        listXiaomiAdapter.setOnItemClickCallback(object : ListXiaomiAdapter.OnItemClickCallback {
+            override fun onItemClicked(data: Xiaomi) {
+                showSelectedHero(data)
+            }
+        })
+
     }
 
 
@@ -61,6 +68,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     // Selesai - Untuk Mengatur Option Menu Kanan Atas
+
+    private fun showSelectedHero(hp: Xiaomi) {
+
+        val moveWithDataIntent = Intent(this@MainActivity, DetailXiaomi::class.java)
+        moveWithDataIntent.putExtra(DetailXiaomi.EXTRA_IMAGE,hp.image)
+        moveWithDataIntent.putExtra(DetailXiaomi.EXTRA_NAMA, hp.name)
+        moveWithDataIntent.putExtra(DetailXiaomi.EXTRA_SPESIFIKASI, hp.specification)
+        moveWithDataIntent.putExtra(DetailXiaomi.EXTRA_HARGA, hp.price)
+        moveWithDataIntent.putExtra(DetailXiaomi.EXTRA_MOREINFO, hp.detail)
+
+        startActivity(moveWithDataIntent)
+    }
 
 
 }

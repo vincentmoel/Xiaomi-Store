@@ -54,6 +54,105 @@ object XiaomiData
         R.drawable.poco_x3_nfc
     )
 
+    private val xiaomiDetail = arrayOf(
+//        "RAM : 8GB\nStorage Internal : 128GB\nProsesor : Qualcomm Snapdragon 732G\nLayar : DotDisplay Amoled FHD+ 6,55inch\nDimensi : 160,53mm x 75,73mm x 6,61mm\nBaterai : 4250mAh",
+        """
+            RAM : 8GB
+            Storage Internal : 128GB
+            Prosesor : Qualcomm Snapdragon 732G
+            Layar : DotDisplay Amoled FHD+ 6,55inch
+            Dimensi : 160,53mm x 75,73mm x 6,61mm
+            Baterai : 4250mAh
+            Mendukung : Fast Charging 33W, fingerprint unlock, face unlock
+        """.trimIndent(),
+        """
+            RAM : 8GB
+            Storage Internal : 128GB
+            Prosesor : Qualcomm Snapdragon 865
+            Layar : IPS FHD+
+            Dimensi : 165mm x 76mm x 9,3mm
+            Baterai : 5000mAh
+            Mendukung : Fast Charging 33W, fingerprint unlock, face unlock 
+        """.trimIndent(),
+        """
+            RAM : 8GB
+            Storage Internal : 128GB
+            Prosesor : MediaTek Helio G95
+            Layar : DotDisplay Amoled FHD+ 6.43inch
+            Dimensi : 160,46mm x 74mm x 8mm
+            Baterai : 4500mAh
+            Mendukung : Fast Charging 33W, fingerprint unlock, face unlock 
+        """.trimIndent(),
+
+
+        """
+            RAM : 8GB
+            Storage Internal : 128GB
+            Prosesor : Qualcomm Snapdragon 732G
+            Layar : Super AMOLED FHD+ 120Hz 6.67inch
+            Dimensi : 160mm x 76mm x 8mm
+            Baterai : 5020mAh
+            Mendukung : Fast Charging 33W, fingerprint unlock, face unlock 
+        """.trimIndent(),
+        """
+            RAM : 4GB
+            Storage Internal : 64GB
+            Prosesor : Qualcomm® Snapdragon™ 678
+            Layar : Super AMOLED FHD+ 6.43inch
+            Dimensi : 160,46mm x 74mm x 8mm
+            Baterai : 5000mAh
+            Mendukung : Fast Charging 33W, fingerprint unlock, face unlock 
+        """.trimIndent(),
+        """
+            RAM : 8GB
+            Storage Internal : 128GB
+            Prosesor : Qualcomm Snapdragon 720G
+            Layar : DotDisplay IPS FHD+ 6.67inch
+            Dimensi : 165,46mm x 76mm x 8,8mm
+            Baterai : 5020mAh
+            Mendukung : Fast Charging 33W, fingerprint unlock, face unlock 
+        """.trimIndent(),
+
+
+        """
+            RAM : 6GB
+            Storage Internal : 128GB
+            Prosesor : Qualcomm Snapdragon 870
+            Layar : DotDisplay AMOLED FHD+
+            Dimensi : 165,46mm x 76mm x 8,8mm
+            Baterai : 4520mAh 
+            Mendukung : Fast Charging 33W, fingerprint unlock, face unlock 
+        """.trimIndent(),
+        """
+            RAM : 6GB
+            Storage Internal : 128GB
+            Prosesor : MediaTek Dimensity 700
+            Layar : DotDisplay IPS FHD+
+            Dimensi : 161,46mm x 75mm x 8,9mm
+            Baterai : 5000mAh
+            Mendukung : Fast Charging 18W, fingerprint unlock, face unlock 
+        """.trimIndent(),
+        """
+            RAM : 6GB
+            Storage Internal : 128GB
+            Prosesor : Qualcomm Snapdragon 860
+            Layar : DotDisplay IPS FHD+
+            Dimensi : 165,46mm x 76mm x 9mm
+            Baterai : 5020mAh
+            Mendukung : Fast Charging 33W, fingerprint unlock, face unlock 
+        """.trimIndent(),
+
+        """
+            RAM : 6GB
+            Storage Internal : 128GB
+            Prosesor : Qualcomm Snapdragon 732G
+            Layar : DotDisplay IPS FHD+ 6.67inch
+            Dimensi : 165,46mm x 76mm x 9mm
+            Baterai : 5160mAh
+            Mendukung : Fast Charging 33W, fingerprint unlock, face unlock 
+        """.trimIndent(),
+    )
+
     val listDataXiaomi: ArrayList<Xiaomi>
         get()
         {
@@ -64,6 +163,7 @@ object XiaomiData
                 xiaomiPhone.specification = xiaomiSpecification[position]
                 xiaomiPhone.price = xiaomiPrice[position]
                 xiaomiPhone.image = xiaomiImages[position]
+                xiaomiPhone.detail = xiaomiDetail[position]
                 listHpXiaomi.add(xiaomiPhone)
             }
             return listHpXiaomi

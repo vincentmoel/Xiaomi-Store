@@ -4,5 +4,6 @@ data class Xiaomi(
     var name : String = "",
     var specification : String = "",
     var price : String = "",
-    var image : Int = 0
+    var image : Int = 0,
+    var detail : String = ""
 )

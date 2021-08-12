@@ -38,28 +38,17 @@
             android:textColor="@color/black"
             android:layout_marginBottom="8dp"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="33dp">
-
-            <TextView
-                android:id="@+id/tv_harga_produk"
-                android:layout_width="140dp"
-                android:layout_height="wrap_content"
-                android:text="@string/harga_produk"
-                android:textColor="@color/black"/>
-
-            <Button
-                android:id="@+id/btn_detail"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:insetTop="0dp"
-                android:insetBottom="0dp"
-                android:text="@string/detail"
-                android:textSize="10sp" />
 
 
-        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_harga_produk"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="@string/harga_produk"
+            android:textColor="@color/black"/>
+
+
+
 
 
 
